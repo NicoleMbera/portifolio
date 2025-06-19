@@ -1,0 +1,233 @@
+
+/* Reset & base */
+*{ 
+    margin:0;
+    padding:0; 
+    box-sizing:border-box;
+}
+
+body{ 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: 14.5px;
+   
+
+}
+
+a{
+    color: orangered;
+    text-decoration:none;
+}
+a:hover{
+     text-decoration: underline; 
+}
+
+header, section, footer { padding:  20px; }
+h1, h2, h3 { margin-bottom: 20px;
+color: orangered;  }
+
+/* Header & hero */
+.nav{ 
+    display:flex; 
+    justify-content: space-between;
+    align-items:center; 
+    padding:20px;
+    position:sticky; 
+    top:0; 
+    color: orangered;
+    /* border-bottom:1px solid #eee; */
+}
+
+.nav .logo{ 
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.nav ul{ 
+    display:flex; 
+    list-style:none;
+    /* margin-left:10px; */
+ }
+.nav li + li { margin-left: 40px; }
+.hero {
+    display:flex; 
+    align-items:center;
+    justify-content:space-between;
+    height:47vh;
+    text-align:center;
+   
+ }
+.hero h1 { 
+    display: inline-block;
+    font-size: 2.5rem;
+    overflow: hidden;
+    color: orangered;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;animation-delay: 0s;
+ }
+ /* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+
+.hero p{
+     font-size:1.2rem;
+      margin-bottom:20px; 
+}
+.btn { 
+    margin-top: 50px;
+    padding:10px 20px;
+    background-color: orangered;
+    color:#fff; 
+     border-radius:4px; 
+}
+
+/* Portfolio */
+#skills {
+  padding: 2rem;
+  background-color: #f9fafb;
+  overflow: hidden;
+  color: orangered;
+}
+
+.skills-title {
+  text-align: center;
+ color: orangered;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.skills-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.skills-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scrollSkills 20s linear infinite;
+}
+
+.skill-card {
+  flex: 0 0 auto;
+  min-width: 300px;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+.skill-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  margin: 0;
+  color: #555;
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* About */
+.about{
+    background-color: white;
+    padding: 60px;
+    display: flex;
+}
+.about p { max-width:600px; margin:0 auto; }
+
+/* projects carousel */
+.projects{ 
+  position:relative; 
+  max-width:800px;
+  margin:0 auto; 
+  text-align:center; 
+  
+  /* background-color: black; */
+}
+
+.carousel{
+  position:relative;
+  overflow:hidden; 
+  
+}
+.slide{
+   display:none; 
+   padding:20px; 
+}
+.slide.active{ 
+  display:block; 
+}
+.projects blockquote{ 
+  font-style:italic;
+  margin-bottom:15px; 
+}
+.projects cite{
+ 
+  display:block; 
+  font-weight:bold; 
+}
+#prev, #next{ 
+  position:absolute; 
+  top:50%; transform:translateY(-50%); 
+  background:#fff; border:1px solid #ccc; 
+  border-radius:50%; 
+  width:40px; 
+  height:40px; 
+  cursor:pointer; 
+}
+#prev{ 
+  left:10px; 
+}
+#next{ 
+  right:10px; 
+}
+
+/* Contact & footer */
+.contact{ 
+  
+  text-align:center;
+  background: orangered; 
+}
+.contact h4{
+  color: black;
+  font-size: 1.5rem;
+}
+.contact a{
+  color: black;
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: black;
+  font-size: 24px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+
+footer{ 
+text-align:center; 
+font-size:.9rem; 
+background: orangered; 
+}
